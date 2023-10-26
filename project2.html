@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Your name - portfolio</title>
+      <style>
+        body{
+            font-family:Arial,sans-serif;
+            margin: e;
+            padding: e;
+            background-color:black;
+        }
+
+        header{
+            background-color:lightslategray;
+            color:black;
+            text-align:center;
+            padding:2rem 0;
+            position:relative;
+        }
+
+        .header-content h1{
+            font-size: 2.5rem;
+        }
+
+
+        .profile-picture{
+            width: 100px;
+            height: 100px;
+            border-radius: 75%;
+            object-fit: cover;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+        }
+
+        nav {
+            background-color:rgba(145, 26, 95, 0);
+            color:black;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        nav ul li{
+            display: inline;
+            margin:0 20px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: bisque;
+        }
+
+            .section-content {
+            background-color:lightslategray ;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow:0 0 10px rgba(red, green, blue, alpha);
+        }
+
+        .download-button{
+            background-color:black;
+            color: aliceblue;
+            padding:0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;  
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .download-button:hover{
+            background-color: bisque;
+        }  
+        footer{
+            text-align: center;
+            padding: 1rem 0;
+            background-color:bisque;
+            color: rgb(0, 0, 0);
+        }
+
+        ul{
+            list-style-type: lower-roman;
+            padding-left: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+
+                <img src="ms.jpg" alt="your profile-picture" class="profile-picture">
+                <h1>M.A.Firthous Fathima</h1>
+                <p>Computer Science</p>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href ="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+   </ul>
+        </nav>
+
+        <section id="about">
+            <div class="section-content">
+                <h2>About me</h2>
+                <p>Hello Everyone!This is Malish K  and im computer science student </p>
+               </div>
+               </section>
+              <section id="education">
+                <div class="section-content">
+                <h2>Education</h2>
+                <p>Women's christian college-CSE-bsc.</p>
+            </div>
+        </section> 
+        <section id="skills">
+            <div class="section-content">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Java</li>
+                    <li>Machine learning</li>
+                    <li>PHP</li>
+                    <li>C++</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+        </section>
+
+             <section id="resume">   
+                <center>       
+                <div class="section-content">
+                    <h2>Resume</h2>
+                    <a href="RESUME.docx"class="download-button">Download CV</a>
+                    </ul>
+                </div>
+            </section>
+         
+        <footer>
+            <p>&copy; 2023 M.A.Firthous Fathima</p>        
+        </footer>
+
+        <script>
+
+            document.querySelectorAll('a[href^="#"]').foreach(anchor =>{
+                anchor.addEventListener('click',function(e){
+                    e.preventDefault();
+
+                    const targetId=this.getAttribute('href').substring(1);
+                const targetElement=document.getElementById(targetId);
+
+                if(targetElement) {
+                    window.scrollTo({
+                        top:targetElement.offsetTop,
+                        behavior:'smooth'
+                    });
+                }
+            });
+            });
+        </script>
+    </body>
+    </html>
+
+            
+        
+    
+       
